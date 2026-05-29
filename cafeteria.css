@@ -332,3 +332,132 @@ h6 {
     font-size: 12px;
     letter-spacing: 0.5px;
 }
+
+/* Media Queries */
+/* Tablets */
+@media (max-width: 1100px) {
+    main {
+        width: 95%;
+    }
+    #inicio h1::after {
+        width: 80%;
+    }
+    .bloque-superior {
+        flex-direction: column;
+        align-items: center;
+    }
+    article,
+    aside {
+        width: 100%;
+        height: auto;
+    }
+    aside {
+        padding-left: 0;
+    }
+
+    .productos {
+        justify-content: center;
+        gap: 20px;
+    }
+
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+    .menu-principal ul {
+        flex-direction: column;
+        gap: 5px;
+        padding: 10px;
+    }
+    .menu-principal a {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    #inicio h1 {
+        font-size: 36px;
+        padding: 0 10px;
+    }
+
+    #inicio h1::after {
+        width: 70%;
+    }
+    .banner img {
+        height: 220px;
+    }
+    article {
+        padding: 20px;
+    }
+
+    article h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    article ol {
+        font-size: 14px;
+    }
+
+    aside div {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    aside div p {
+        font-size: 12px;
+    }
+
+    .productos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tarjeta {
+        width: 95%;
+        max-width: 320px;
+        height: auto;
+        padding-bottom: 15px;
+    }
+
+    .tarjeta img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .tarjeta figcaption {
+        font-size: 13px;
+    }
+
+    .info-final {
+        padding: 20px;
+    }
+
+    h6,
+    .footer-autor {
+        padding: 0 10px;
+        text-align: center;
+    }
+}
+
+
+/* Celulares pequeños */
+@media (max-width: 480px) {
+
+    #inicio h1 {
+        font-size: 28px;
+    }
+
+    article h1 {
+        font-size: 24px;
+    }
+
+    .titulo-producto {
+        font-size: 18px;
+    }
+
+    .menu-principal a {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+}
