@@ -12,8 +12,8 @@
     --color-fondo: #ffffff;          
     
     /* Tipografía */
-    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --fuente-titulos: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    --fuente-principal: 'Poppins', sans-serif;
+    --fuente-titulos: 'Playfair Display', serif;
 }
 
 html {
@@ -23,7 +23,7 @@ html {
 /* Body */
 body {
     margin: 0;
-    background-color: var(--color-gris-claro); 
+    background: linear-gradient(to right, #d9d2cb, #ece7e1, #d9d2cb);
     color: var(--color-texto-oscuro);
     font-family: var(--fuente-principal);
 }
@@ -40,6 +40,9 @@ main {
 header {
     background-color: var(--color-azul-fondo);
     border-bottom: 3px solid var(--color-marron-cafe);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 /* Menu Principal */
@@ -74,6 +77,22 @@ header {
     background-color: rgba(176, 112, 68, 0.2);
 }
 
+/* Efecto Link Menu */
+.menu-principal a:link {
+    color: var(--color-marron-cafe);
+}
+
+/* Efecto Visited Menu */
+.menu-principal a:visited {
+    color: #d2b48c;
+}
+
+/* Efecto Focus Menu */
+.menu-principal a:focus {
+    outline: 2px;
+    background-color: var(--color-marron-hover);
+} 
+
 /* Banner */
 .banner img {
     width: 100%;
@@ -81,6 +100,27 @@ header {
     object-fit: cover; 
     object-position: center; 
     display: block;
+}
+
+#inicio h1 {
+    text-align: center;
+    font-family: var(--fuente-titulos);
+    font-size: 52px;
+    color: var(--color-azul-fondo);
+    margin-top: 35px;
+    margin-bottom: 35px;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+#inicio h1::after {
+    content: "";
+    display: block;
+    width: 600px;
+    height: 4px;
+    background-color: var(--color-marron-cafe);
+    margin: 12px auto 0 auto;
+    border-radius: 10px;
 }
 
 /* No lo estoy usando */
@@ -97,16 +137,24 @@ header {
 /* Contenedor Principal */
 .bloque-superior {
     display: flex;
-    width: 100%;
+    justify-content: space-between;
+    align-items: stretch;
+    width: calc(100% - 40px);
+    margin: 20px auto;
+    gap: 20px;
 }
 
 /* Seccion Top Cafes */
 article {
     width: 652px;
     height: 250px;
-    background-color: var(--color-azul-fondo); 
+    background-color: var(--color-azul-fondo);
     box-sizing: border-box;
-    padding: 25px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 8px;
 }
 
 article h1 {
@@ -177,16 +225,18 @@ aside div:hover {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px 0;
-    margin-top: 25px;
+    margin-top: 2px;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
 .tarjeta {
-    width: 280px;
+    width: 270px;
     height: 370px;
-    margin: 0;
+    margin-top: 5px;
     background-color: var(--color-fondo);
     border: solid 1px var(--color-borde);
-    border-radius: 8px;
+    border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
     transition: 0.3s ease;
@@ -213,6 +263,15 @@ aside div:hover {
     height: 180px;
     object-fit: contain;
     margin: 25px auto 10px auto;
+    opacity: 0.9;
+    filter: brightness(105%);
+    transition: 0.4s ease;
+}
+
+.tarjeta img:hover {
+    filter: grayscale(20%) blur(0.5px);
+    transform: scale(1.05) rotate(3deg);
+    opacity: 1;
 }
 
 .tarjeta figcaption {
