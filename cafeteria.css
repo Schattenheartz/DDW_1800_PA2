@@ -1,3 +1,275 @@
+:root {
+    /* Colores de Identidad */
+    --color-azul-fondo: #132d3e;     
+    --color-marron-cafe: #b07044;    
+    --color-marron-hover: #8c532e;   
+    
+    /* Colores de Estructura y Texto */
+    --color-gris-claro: #f4f7f6;     
+    --color-texto-oscuro: #1a2226;   
+    --color-texto-mutado: #606f7b;   
+    --color-borde: #d1d9e0;          
+    --color-fondo: #ffffff;          
+    
+    /* Tipografía */
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --fuente-titulos: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body */
 body {
-    background-color: black;
+    margin: 0;
+    background-color: var(--color-gris-claro); 
+    color: var(--color-texto-oscuro);
+    font-family: var(--fuente-principal);
+}
+
+/* Main */
+main {
+    width: 1080px;
+    margin: auto;
+    background-color: var(--color-fondo);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); 
+}
+
+/* Header */
+header {
+    background-color: var(--color-azul-fondo);
+    border-bottom: 3px solid var(--color-marron-cafe);
+}
+
+/* Menu Principal */
+.menu-principal ul {
+    margin: 0;
+    padding: 0 20px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px;
+    gap: 15px;
+}
+
+.menu-principal a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--color-marron-cafe); 
+    font-family: var(--fuente-principal);
+    font-weight: 600;
+    border-radius: 4px;
+    text-transform: uppercase; 
+    font-size: 15px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+/* Efecto Hover Menu */
+.menu-principal a:hover {
+    color: var(--color-fondo); 
+    background-color: rgba(176, 112, 68, 0.2);
+}
+
+/* Banner */
+.banner img {
+    width: 100%;
+    height: 350px; 
+    object-fit: cover; 
+    object-position: center; 
+    display: block;
+}
+
+/* No lo estoy usando */
+.ruta {
+    padding: 10px 0;
+    font-family: var(--fuente-principal);
+    color: var(--color-marron-cafe); 
+}
+
+#Inicio2 {
+    padding-left: 10px;
+}
+
+/* Contenedor Principal */
+.bloque-superior {
+    display: flex;
+    width: 100%;
+}
+
+/* Seccion Top Cafes */
+article {
+    width: 652px;
+    height: 250px;
+    background-color: var(--color-azul-fondo); 
+    box-sizing: border-box;
+    padding: 25px;
+}
+
+article h1 {
+    margin-top: 0;
+    color: #ffffff;
+    font-family: var(--fuente-titulos);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+article ol {
+    margin-top: 15px;
+    padding-left: 20px;
+    color: #f4f7f6;
+    font-family: var(--fuente-principal);
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+article ol li {
+    margin-bottom: 5px;
+}
+
+/* Aside */
+aside {
+    width: 352px;
+    height: 250px;
+    background-color: var(--color-fondo);
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+aside div {
+    height: 56px;
+    padding-top: 3.5px;
+    margin-bottom: 5px;
+    color: #ffffff; 
+    text-align: center;
+    font-family: var(--fuente-principal);
+    border-radius: 6px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+aside div p {
+    margin: 0;
+    padding: 0 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Hover Aside */
+aside div:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Colores del Aside ID */
+#AzulOscuro { background-color: #2c4d63; }                    
+#AzulClaro { background-color: #435e70; }                
+#MarronOscuro { background-color: #8c532e; }  
+#MarronClaro { background-color: #b07044; } 
+
+/* Seccion de Productos */
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px 0;
+    margin-top: 25px;
+}
+
+.tarjeta {
+    width: 280px;
+    height: 370px;
+    margin: 0;
+    background-color: var(--color-fondo);
+    border: solid 1px var(--color-borde);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    transition: 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(19, 45, 62, 0.15);
+}
+
+.titulo-producto {
+    margin: 0;
+    padding: 12px;
+    background-color: var(--color-azul-fondo); 
+    color: #ffffff;
+    font-family: var(--fuente-titulos);
+    text-align: center;
+    border-bottom: 2px solid var(--color-marron-cafe);
+}
+
+.tarjeta img {
+    display: block;
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    margin: 25px auto 10px auto;
+}
+
+.tarjeta figcaption {
+    margin: 15px;
+    text-align: justify;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: var(--color-texto-mutado);
+    font-family: var(--fuente-principal);
+}
+
+/* Seccion Nosotros */
+.info-final {
+    margin-top: 35px;
+    padding: 30px;
+    background-color: var(--color-gris-claro);
+    border-left: 6px solid var(--color-marron-cafe);
+    font-family: var(--fuente-principal);
+    border-radius: 0 8px 8px 0;
+}
+
+.info-final h2 {
+    margin-top: 0;
+    color: var(--color-azul-fondo);
+    font-family: var(--fuente-titulos);
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-azul-fondo); 
+    height: auto;
+    padding-top: 1px;
+    padding-bottom: 25px;
+    margin-top: 40px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+h6 {
+    text-align: center;
+    margin: 0 0 5px 0;
+    color: #a0aec0; 
+    font-family: var(--fuente-principal);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.footer-autor {
+    text-align: center;
+    margin: 0;
+    color: var(--color-marron-cafe);
+    font-family: var(--fuente-principal);
+    font-size: 12px;
+    letter-spacing: 0.5px;
 }
